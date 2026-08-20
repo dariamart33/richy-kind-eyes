@@ -522,6 +522,99 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.family-album {
+  margin-top: 74px;
+}
+
+.family-album-heading {
+  align-items: end;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 38px;
+}
+
+.family-album-heading .eyebrow {
+  margin: 0 0 8px;
+}
+
+.family-album-heading h3 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0;
+  text-align: right;
+}
+
+.family-album-heading h3 em {
+  color: var(--copper);
+  display: block;
+  font-weight: 400;
+}
+
+.family-album-grid {
+  display: grid;
+  gap: 34px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 42px;
+}
+
+.family-story {
+  background: var(--forest);
+  color: var(--paper);
+  margin: 0;
+  min-width: 0;
+}
+
+.family-story-photo {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.family-story-photo img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.family-story-sisters .family-story-photo img {
+  object-position: center 38%;
+}
+
+.family-story-grandfather .family-story-photo img {
+  object-position: center center;
+}
+
+.family-story figcaption {
+  padding: 26px 30px 29px;
+}
+
+.family-story figcaption > span {
+  color: #d99870;
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+
+.family-story figcaption strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.6vw, 38px);
+  font-weight: 400;
+}
+
+.family-story figcaption p {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 14px 0 0;
+}
+
 .gallery-section {
   background: #e9e2d6;
   border-top: 1px solid rgba(20, 35, 31, 0.12);
@@ -967,6 +1060,37 @@ footer p,
 
   .parent-card-copy {
     padding: 25px 24px 26px;
+  }
+
+  .family-album {
+    margin-top: 58px;
+  }
+
+  .family-album-heading {
+    align-items: flex-start;
+    display: block;
+    padding-top: 32px;
+  }
+
+  .family-album-heading .eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .family-album-heading h3 {
+    text-align: left;
+  }
+
+  .family-album-grid {
+    display: block;
+    margin-top: 34px;
+  }
+
+  .family-story + .family-story {
+    margin-top: 34px;
+  }
+
+  .family-story figcaption {
+    padding: 24px;
   }
 
   .gallery-section {
