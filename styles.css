@@ -195,6 +195,7 @@ a:focus-visible {
 
 .hero h1,
 .intro h2,
+.parents-section h2,
 .gallery-section h2,
 .show-section h2,
 .contact h2 {
@@ -320,6 +321,7 @@ a:focus-visible {
 }
 
 .intro h2,
+.parents-section h2,
 .gallery-section h2,
 .show-section h2,
 .contact h2 {
@@ -394,6 +396,130 @@ a:focus-visible {
   line-height: 1.55;
   margin: 22px 0 0;
   padding: 13px 15px;
+}
+
+.parents-section {
+  border-top: 1px solid var(--line);
+  padding-bottom: 126px;
+  padding-top: 112px;
+}
+
+.parents-heading {
+  align-items: end;
+  display: grid;
+  gap: clamp(36px, 6vw, 92px);
+  grid-template-columns: 22px minmax(0, 1fr) minmax(260px, 0.52fr);
+  margin-bottom: 58px;
+}
+
+.parents-heading .eyebrow {
+  margin-bottom: 20px;
+}
+
+.parents-section h2 span {
+  display: inline-block;
+  font-size: 0.52em;
+  letter-spacing: 0;
+  transform: translateY(-0.12em);
+}
+
+.parents-heading > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 5px;
+  max-width: 410px;
+}
+
+.parents-grid {
+  display: grid;
+  gap: 34px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.parent-card {
+  background: var(--cream);
+  border: 1px solid rgba(20, 35, 31, 0.12);
+  margin: 0;
+  min-width: 0;
+}
+
+.parent-photo {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.parent-photo img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.parent-card-mother .parent-photo img {
+  object-position: center 34%;
+}
+
+.parent-card-father .parent-photo img {
+  object-position: center 30%;
+}
+
+.parent-card-copy {
+  padding: 28px 30px 30px;
+}
+
+.parent-role {
+  color: var(--copper);
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.parent-card h3 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.6vw, 39px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 8px 0 22px;
+}
+
+.parent-card dl {
+  margin: 0;
+}
+
+.parent-card dl > div {
+  align-items: baseline;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.parent-card dt,
+.parent-card dd {
+  margin: 0;
+}
+
+.parent-card dt {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.parent-card dd {
+  font-family: var(--serif);
+  font-size: 14px;
+  text-align: right;
+}
+
+.parents-note {
+  color: #8a7567;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0;
+  margin-top: 22px;
+  text-transform: uppercase;
 }
 
 .gallery-section {
@@ -801,6 +927,7 @@ footer p,
   }
 
   .intro,
+  .parents-heading,
   .show-heading {
     display: block;
     padding-bottom: 88px;
@@ -813,6 +940,33 @@ footer p,
 
   .profile-card {
     margin-top: 58px;
+  }
+
+  .parents-section {
+    padding-bottom: 88px;
+    padding-top: 82px;
+  }
+
+  .parents-heading {
+    margin-bottom: 42px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .parents-heading > p {
+    margin-top: 26px;
+  }
+
+  .parents-grid {
+    display: block;
+  }
+
+  .parent-card + .parent-card {
+    margin-top: 34px;
+  }
+
+  .parent-card-copy {
+    padding: 25px 24px 26px;
   }
 
   .gallery-section {
