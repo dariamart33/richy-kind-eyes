@@ -449,7 +449,7 @@ a:focus-visible {
 
 .gallery-card-tall img {
   height: 760px;
-  object-position: center 48%;
+  object-position: 60% center;
 }
 
 .gallery-card-wide img {
