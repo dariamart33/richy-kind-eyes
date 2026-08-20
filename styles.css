@@ -647,8 +647,9 @@ a:focus-visible {
 
 .gallery-grid {
   display: grid;
-  gap: 28px 34px;
-  grid-template-columns: 1fr 1.1fr;
+  align-items: start;
+  gap: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .gallery-card {
@@ -658,27 +659,8 @@ a:focus-visible {
 
 .gallery-card img {
   display: block;
-  object-fit: cover;
+  height: auto;
   width: 100%;
-}
-
-.gallery-card-tall {
-  grid-row: 1 / span 2;
-}
-
-.gallery-card-tall img {
-  height: 760px;
-  object-position: 60% center;
-}
-
-.gallery-card-wide img {
-  height: 345px;
-  object-position: center 35%;
-}
-
-.gallery-card-portrait img {
-  height: 344px;
-  object-position: center 40%;
 }
 
 .gallery-card figcaption {
@@ -1114,15 +1096,6 @@ footer p,
 
   .gallery-card + .gallery-card {
     margin-top: 36px;
-  }
-
-  .gallery-card-tall img,
-  .gallery-card-portrait img {
-    height: min(118vw, 560px);
-  }
-
-  .gallery-card-wide img {
-    height: auto;
   }
 
   .show-section {
