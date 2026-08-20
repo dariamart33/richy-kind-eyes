@@ -646,10 +646,13 @@ a:focus-visible {
 }
 
 .gallery-grid {
-  display: grid;
   align-items: start;
+  display: grid;
   gap: 28px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "featured right-top"
+    "featured right-bottom";
+  grid-template-columns: minmax(0, 1.56fr) minmax(0, 1fr);
 }
 
 .gallery-card {
@@ -661,6 +664,18 @@ a:focus-visible {
   display: block;
   height: auto;
   width: 100%;
+}
+
+.gallery-card-featured {
+  grid-area: featured;
+}
+
+.gallery-card-right-top {
+  grid-area: right-top;
+}
+
+.gallery-card-right-bottom {
+  grid-area: right-bottom;
 }
 
 .gallery-card figcaption {
