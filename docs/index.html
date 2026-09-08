@@ -11,7 +11,7 @@
     />
     <link rel="canonical" href="https://richykindeyespussycat.ru/" />
     <link rel="icon" href="./favicon.svg?v=rk-20260820" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=richy-interactive-20260908c" />
+    <link rel="stylesheet" href="./styles.css?v=richy-ux-20260908" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
@@ -72,23 +72,24 @@
 
         <div class="richy-stage">
           <div class="richy-halo" aria-hidden="true"></div>
-          <div class="richy-mascot">
-            <div class="richy-breath">
+          <button class="richy-mascot" type="button" aria-label="Погладить Риччи">
+            <span class="richy-breath">
               <img
-                src="./richy-mascot-v3.webp"
+                src="./richy-mascot-v4.webp"
                 alt="Интерактивный маскот мейн-куна Риччи"
                 width="1100"
                 height="1100"
                 fetchpriority="high"
                 draggable="false"
               />
-            </div>
+            </span>
+          </button>
+          <div class="motion-controls">
+            <p class="interaction-hint">Нажмите на Риччи, чтобы погладить</p>
+            <button type="button" class="motion-toggle" aria-pressed="false">Пауза анимации</button>
           </div>
-          <p class="interaction-hint"><span></span> Я слежу за курсором</p>
         </div>
 
-        <div class="hero-index" aria-hidden="true">01</div>
-        <div class="scroll-cue" aria-hidden="true"><span>листайте</span><i></i></div>
       </section>
 
       <section class="intro section-shell" id="about">
@@ -362,7 +363,7 @@
         <a class="back-top" href="#top">Наверх ↑</a>
       </footer>
     </main>
-    <script src="./interactive-richy.js?v=20260908c"></script>
+    <script src="./interactive-richy.js?v=richy-ux-20260908"></script>
     <script src="./analytics.js?v=20260820"></script>
   </body>
 </html>

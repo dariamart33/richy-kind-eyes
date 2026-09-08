@@ -8,6 +8,7 @@
   const current = { x: 0, y: 0 };
   let frame = null;
   let reactionTimer = null;
+  let paused = false;
 
   const paint = () => {
     current.x += (target.x - current.x) * 0.14;
@@ -31,7 +32,7 @@
   };
 
   hero.addEventListener("pointermove", (event) => {
-    if (event.pointerType !== "mouse" || reducedMotion.matches) return;
+    if (event.pointerType !== "mouse" || paused || reducedMotion.matches) return;
 
     const bounds = hero.getBoundingClientRect();
     target.x = clamp((event.clientX - bounds.left - bounds.width / 2) / (bounds.width / 2));
@@ -40,12 +41,14 @@
   });
 
   hero.addEventListener("pointerleave", () => {
+    if (paused || reducedMotion.matches) return;
     target.x = 0;
     target.y = 0;
     requestPaint();
   });
 
-  hero.addEventListener("pointerdown", () => {
+  hero.querySelector(".richy-mascot").addEventListener("click", () => {
+    if (paused || reducedMotion.matches) return;
     hero.classList.remove("is-richy-reacting");
     void hero.offsetWidth;
     hero.classList.add("is-richy-reacting");
@@ -54,5 +57,16 @@
     reactionTimer = window.setTimeout(() => {
       hero.classList.remove("is-richy-reacting");
     }, 720);
+  });
+
+  const toggle = hero.querySelector(".motion-toggle");
+  toggle.addEventListener("click", () => {
+    paused = !paused;
+    hero.classList.toggle("is-motion-paused", paused);
+    toggle.setAttribute("aria-pressed", String(paused));
+    target.x = current.x = 0;
+    target.y = current.y = 0;
+    if (frame !== null) cancelAnimationFrame(frame);
+    frame = null;
   });
 })();
