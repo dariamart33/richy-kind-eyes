@@ -13,11 +13,9 @@
     current.x += (target.x - current.x) * 0.14;
     current.y += (target.y - current.y) * 0.14;
 
-    hero.style.setProperty("--richy-x", `${current.x * 18}px`);
-    hero.style.setProperty("--richy-y", `${current.y * 10}px`);
-    hero.style.setProperty("--richy-rotate", `${current.x * 1.4}deg`);
-    hero.style.setProperty("--gaze-x", `${current.x * 4.5}px`);
-    hero.style.setProperty("--gaze-y", `${current.y * 2.6}px`);
+    hero.style.setProperty("--richy-x", `${current.x * 14}px`);
+    hero.style.setProperty("--richy-y", `${current.y * 7}px`);
+    hero.style.setProperty("--richy-rotate", `${current.x * 0.9}deg`);
     hero.style.setProperty("--scene-x", `${current.x * -12}px`);
     hero.style.setProperty("--scene-y", `${current.y * -8}px`);
 
