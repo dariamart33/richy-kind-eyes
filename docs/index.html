@@ -11,7 +11,7 @@
     />
     <link rel="canonical" href="https://richykindeyespussycat.ru/" />
     <link rel="icon" href="./favicon.svg?v=rk-20260820" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=richy-ux-20260908" />
+    <link rel="stylesheet" href="./styles.css?v=richy-craft-20260908" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
@@ -30,7 +30,7 @@
   <body>
     <main>
       <header class="site-header">
-        <a class="wordmark" href="#top" aria-label="В начало страницы">
+        <a class="wordmark" href="#top" aria-label="Richy Kind Eyes: в начало страницы">
           <span class="wordmark-mark"><i>R</i></span>
           <span>
             <strong>Richy Kind Eyes</strong>
@@ -50,17 +50,14 @@
         <div class="hero-atmosphere" aria-hidden="true">
           <i class="hero-orbit hero-orbit-one"></i>
           <i class="hero-orbit hero-orbit-two"></i>
-          <i class="hero-spark hero-spark-one"></i>
-          <i class="hero-spark hero-spark-two"></i>
         </div>
 
         <div class="hero-copy">
           <p class="eyebrow"><span></span> Наша первая выставка</p>
           <h1>Риччи.<em>Первый выход.</em></h1>
           <p class="hero-lead">
-            Мы с Риччи впервые выходим на выставочный ринг. Эта страница —
-            короткое знакомство с молодой кошкой породы мейн-кун и нашей
-            общей подготовкой к дебюту.
+            Знакомьтесь: молодая кошка породы мейн-кун, её характер
+            и наша подготовка к первой выставке.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#about">
@@ -71,21 +68,22 @@
         </div>
 
         <div class="richy-stage">
-          <div class="richy-halo" aria-hidden="true"></div>
-          <button class="richy-mascot" type="button" aria-label="Погладить Риччи">
-            <span class="richy-breath">
+          <button class="richy-mascot" type="button" aria-label="Погладить Риччи" aria-describedby="richy-hint">
+            <span class="richy-response"><span class="richy-breath">
               <img
                 src="./richy-mascot-v4.webp"
+                srcset="./richy-mascot-v4-480.webp 480w, ./richy-mascot-v4-720.webp 720w, ./richy-mascot-v4.webp 1100w"
+                sizes="(max-width: 700px) clamp(180px, 30svh, 300px), (max-width: 1600px) 44vw, 660px"
                 alt="Интерактивный маскот мейн-куна Риччи"
                 width="1100"
                 height="1100"
                 fetchpriority="high"
                 draggable="false"
               />
-            </span>
+            </span></span>
           </button>
           <div class="motion-controls">
-            <p class="interaction-hint">Нажмите на Риччи, чтобы погладить</p>
+            <p class="interaction-hint" id="richy-hint" aria-live="polite">Нажмите на Риччи, чтобы погладить</p>
             <button type="button" class="motion-toggle" aria-pressed="false">Пауза анимации</button>
           </div>
         </div>
@@ -93,9 +91,7 @@
       </section>
 
       <section class="intro section-shell" id="about">
-        <div class="section-label">Знакомство</div>
         <div class="intro-copy">
-          <p class="eyebrow"><span></span> Участница</p>
           <h2>Кремовое облако с <em>очень серьёзным взглядом.</em></h2>
           <p>
             Риччи родилась 1 февраля 2026 года. Она уже освоила прогулки в
@@ -118,9 +114,7 @@
 
       <section class="parents-section" id="parents" aria-labelledby="parents-title">
         <div class="parents-heading section-shell">
-          <div class="section-label">Родословная</div>
           <div>
-            <p class="eyebrow"><span></span> Семья Риччи</p>
             <h2 id="parents-title">Мои мама и папа <span aria-hidden="true">❤️</span></h2>
           </div>
           <p>
@@ -176,7 +170,6 @@
 
         <div class="family-album section-shell" aria-labelledby="family-album-title">
           <div class="family-album-heading">
-            <p class="eyebrow"><span></span> Семейный альбом</p>
             <h3 id="family-album-title">Ещё немного <em>о семье.</em></h3>
           </div>
           <div class="family-album-grid">
@@ -231,7 +224,7 @@
               height="1920"
               loading="lazy"
             />
-            <figcaption><span>01</span> Мордочка, лапка и характер</figcaption>
+            <figcaption>Мордочка, лапка и характер</figcaption>
           </figure>
           <figure class="gallery-card gallery-card-right-top">
             <img
@@ -241,7 +234,7 @@
               height="1920"
               loading="lazy"
             />
-            <figcaption><span>02</span> Риччи — всегда рядом</figcaption>
+            <figcaption>Риччи — всегда рядом</figcaption>
           </figure>
           <figure class="gallery-card gallery-card-right-bottom">
             <img
@@ -251,16 +244,14 @@
               height="1086"
               loading="lazy"
             />
-            <figcaption><span>03</span> Риччи у окна</figcaption>
+            <figcaption>Риччи у окна</figcaption>
           </figure>
         </div>
       </section>
 
       <section class="show-section" id="show">
         <div class="show-heading section-shell">
-          <div class="section-label">Наш путь</div>
           <div>
-            <p class="eyebrow light"><span></span> Дебют</p>
             <h2>Впервые — <em>вместе.</em></h2>
           </div>
           <p class="show-intro">
@@ -302,7 +293,6 @@
 
       <section class="contact section-shell" id="contact">
         <div class="contact-main">
-          <p class="eyebrow"><span></span> Контакты</p>
           <h2>Давайте <em>знакомиться.</em></h2>
           <p>
             Напишите мне, если хотите встретиться на выставке, узнать больше
@@ -363,7 +353,7 @@
         <a class="back-top" href="#top">Наверх ↑</a>
       </footer>
     </main>
-    <script src="./interactive-richy.js?v=richy-ux-20260908"></script>
-    <script src="./analytics.js?v=20260820"></script>
+    <script type="module" src="./interactive-richy.js?v=richy-craft-20260908"></script>
+    <script src="./analytics.js?v=richy-craft-20260908"></script>
   </body>
 </html>

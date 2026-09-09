@@ -51,7 +51,7 @@
 
   function showBanner() {
     closeBanner();
-    banner = document.createElement("aside");
+    banner = document.createElement("div");
     banner.className = "consent-banner";
     banner.setAttribute("role", "dialog");
     banner.setAttribute("aria-labelledby", "consent-title");
