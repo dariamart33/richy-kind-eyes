@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://richykindeyespussycat.ru/" />
     <link rel="icon" href="./favicon.svg?v=rk-20260820" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css?v=richy-craft-20260908" />
+    <link rel="stylesheet" href="./richy-loom.css?v=20260911" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
@@ -88,6 +89,32 @@
           </div>
         </div>
 
+      </section>
+
+      <section class="richy-loom" aria-label="Фотолента Риччи">
+        <div class="loom-viewport">
+          <div class="loom-fallback" role="group" aria-label="Фотографии Риччи" tabindex="0">
+            <img src="./richy-loom-hat.webp" alt="Риччи в вязаной шляпке" width="360" height="480" decoding="async" draggable="false" />
+            <img src="./richy-loom-portrait.webp" alt="Риччи на руках" width="360" height="480" decoding="async" draggable="false" />
+            <img src="./richy-loom-walk.webp" alt="Риччи на прогулке в траве" width="360" height="480" decoding="async" draggable="false" />
+            <img src="./richy-loom-hero.webp" alt="Портрет Риччи" width="360" height="480" decoding="async" draggable="false" />
+            <img src="./richy-loom-window.webp" alt="Риччи у окна" width="360" height="480" decoding="async" draggable="false" />
+            <img src="./richy-loom-sister.webp" alt="Маленькая Риччи с сестрой" width="360" height="480" decoding="async" draggable="false" />
+          </div>
+          <canvas class="loom-canvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="loom-toolbar">
+          <p>Моменты Риччи</p>
+          <span class="loom-hint" aria-hidden="true">Перетащите ленту</span>
+          <div class="loom-controls" hidden>
+            <button type="button" data-loom-step="-1" aria-label="Предыдущие фотографии"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6M8 12h12" /></svg></button>
+            <button class="loom-pause" type="button" aria-label="Пауза фотоленты" aria-pressed="false">
+              <svg class="loom-pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
+              <svg class="loom-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z" /></svg>
+            </button>
+            <button type="button" data-loom-step="1" aria-label="Следующие фотографии"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6M4 12h12" /></svg></button>
+          </div>
+        </div>
       </section>
 
       <section class="intro section-shell" id="about">
@@ -353,7 +380,7 @@
         <a class="back-top" href="#top">Наверх ↑</a>
       </footer>
     </main>
-    <script type="module" src="./interactive-richy.js?v=richy-craft-20260908"></script>
+    <script type="module" src="./interactive-richy.js?v=richy-loom-20260911"></script>
     <script src="./analytics.js?v=richy-craft-20260908"></script>
   </body>
 </html>

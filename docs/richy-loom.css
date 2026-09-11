@@ -1,0 +1,110 @@
+.richy-loom {
+  background: var(--paper);
+  color: var(--ink);
+  padding-top: 16px;
+}
+
+.loom-viewport {
+  position: relative;
+  height: clamp(180px, 22vw, 288px);
+  isolation: isolate;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.loom-fallback {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+  padding-inline: var(--page-gutter);
+  scrollbar-width: thin;
+  scrollbar-color: var(--copper-ink) var(--paper);
+  overscroll-behavior-x: contain;
+}
+
+.loom-fallback img {
+  flex: none;
+  width: auto;
+  height: 84%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  user-select: none;
+}
+
+.loom-fallback:focus-visible {
+  outline: 2px solid var(--copper-ink);
+  outline-offset: -4px;
+}
+
+.loom-canvas {
+  position: absolute;
+  inset: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.loom-ready .loom-canvas { display: block; }
+.loom-ready .loom-viewport { cursor: grab; }
+.loom-dragging .loom-viewport { cursor: grabbing; }
+.loom-ready .loom-fallback { opacity: 0; pointer-events: none; }
+
+.loom-toolbar {
+  min-height: 52px;
+  padding: 0 var(--page-gutter) 8px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.loom-toolbar p { margin: 0; font-size: .875rem; }
+.loom-hint { display: none; color: var(--muted); font-size: .875rem; }
+.loom-controls { display: flex; gap: 6px; margin-left: auto; }
+.loom-controls[hidden], .loom-pause[hidden] { display: none; }
+.loom-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.loom-controls svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loom-pause .loom-play-icon,
+.loom-pause[aria-pressed="true"] .loom-pause-icon { display: none; }
+.loom-pause[aria-pressed="true"] .loom-play-icon { display: block; }
+
+@media (hover: hover) and (pointer: fine) {
+  .loom-ready .loom-hint { display: inline; }
+  .loom-controls button:hover { background: var(--ink); color: var(--paper); }
+}
+
+@media (max-width: 700px) {
+  .richy-loom { padding-top: 8px; }
+  .loom-toolbar { gap: 8px; padding-inline: 20px; }
+  .loom-hint { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loom-fallback { scroll-behavior: auto; }
+}
